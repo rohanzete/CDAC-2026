@@ -1,0 +1,23 @@
+A template in C++ allows us to write one generic piece of code that works with different data types.
+
+For example, suppose we want to add two numbers.
+
+Without template:
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+This works only with int.
+
+
+
+We would need another function for double:
+
+double add(double a, double b)
+{
+    return a + b;
+}
+
+With a template, we can write just one function that works with int, double, float, etc.

@@ -1,0 +1,156 @@
+-- Product & Category Assignment Database
+-- MySQL
+
+DROP DATABASE IF EXISTS product_assignment;
+CREATE DATABASE product_assignment;
+USE product_assignment;
+
+CREATE TABLE category (
+    cid INT PRIMARY KEY,
+    category VARCHAR(50) NOT NULL,
+    description VARCHAR(255)
+);
+
+CREATE TABLE product (
+    pid INT PRIMARY KEY,
+    pname VARCHAR(100) NOT NULL,
+    qty INT NOT NULL,
+    mfgdate DATE NOT NULL,
+    expdate DATE NOT NULL,
+    cid INT,
+    FOREIGN KEY (cid) REFERENCES category(cid)
+);
+
+INSERT INTO category (cid, category, description) VALUES
+(1, 'Electronics', 'Electronic devices and accessories'),
+(2, 'Grocery', 'Food and household grocery items'),
+(3, 'Stationery', 'Office and educational stationery'),
+(4, 'Cosmetics', 'Personal care and beauty products'),
+(5, 'Sports', 'Sports and fitness products'),
+(6, 'Home Appliances', 'Appliances used at home');
+
+INSERT INTO product (pid, pname, qty, mfgdate, expdate, cid) VALUES
+(101, 'Wireless Mouse', 25, '2025-01-10', '2028-01-09', 1),
+(102, 'Keyboard', 15, '2025-02-15', '2028-02-14', 1),
+(103, 'USB Cable', 40, '2025-03-01', '2028-02-28', 1),
+(104, 'Notebook', 100, '2025-01-05', '2030-01-04', 3),
+(105, 'Pen Pack', 60, '2025-04-10', '2028-04-09', 3),
+(106, 'Basmati Rice', 50, '2025-05-12', '2027-05-11', 2),
+(107, 'Cooking Oil', 35, '2025-06-20', '2027-06-19', 2),
+(108, 'Shampoo', 20, '2025-02-25', '2027-02-24', 4),
+(109, 'Face Wash', 18, '2025-03-18', '2027-03-17', 4),
+(110, 'Football', 12, '2025-01-20', '2029-01-19', 5),
+(111, 'Cricket Bat', 8, '2025-02-08', '2029-02-07', 5),
+(112, 'Mixer Grinder', 10, '2025-04-15', '2029-04-14', 6),
+(113, 'Electric Kettle', 14, '2025-05-05', '2029-05-04', 6),
+(114, 'Power Bank', 22, '2025-06-10', '2028-06-09', 1),
+(115, 'Marker Set', 45, '2025-07-01', '2028-06-30', 3),
+(116, 'Toothpaste', 30, '2025-07-15', '2027-07-14', 4),
+(117, 'Green Tea', 25, '2025-08-05', '2027-08-04', 2),
+(118, 'Yoga Mat', 16, '2025-08-20', '2029-08-19', 5),
+(119, 'Air Fryer', 7, '2025-09-01', '2029-08-31', 6),
+(120, 'Webcam', 11, '2025-09-15', '2028-09-14', 1);
+
+-- Assignment: Write SQL queries for the following questions.
+-- Do not use JOIN, subqueries, aggregate/string/date functions, GROUP BY, HAVING, or ORDER BY
+-- unless specifically covered separately by your trainer.
+
+
+PRODUCT & CATEGORY SQL ASSIGNMENT
+================================
+
+Tables:
+1. category(cid, category, description)
+2. product(pid, pname, qty, mfgdate, expdate, cid)
+
+Instructions:
+- Write one SQL SELECT query for each question.
+- Do NOT use JOINs.
+- Do NOT use nested/subqueries.
+- Do NOT use SQL functions.
+- Practice arithmetic operators (+, -, *, /, %), comparison operators,
+  logical operators (AND, OR, NOT), BETWEEN, IN, and related operators.
+- Use only the two tables given above.
+
+20 QUESTIONS
+------------
+
+1. Display the product name and quantity of all products whose quantity is
+   greater than 20.
+
+2. Display pid, pname and qty for products whose quantity is less than or
+   equal to 15.
+
+3. Display pname and a calculated column showing the quantity after adding
+   10 units to the current quantity.
+
+4. Display pname and a calculated column showing the quantity after removing
+   5 units from the current quantity.
+
+5. Display pname and a calculated column showing double the current quantity.
+
+6. Display pname and a calculated column showing half of the current quantity.
+
+7. Display pid, pname and qty for products whose quantity is between 10 and 30.
+
+8. Display all products whose quantity is NOT between 10 and 30.
+
+9. Display products belonging to category IDs 1, 3, or 5 using the IN
+   operator.
+
+10. Display products whose category ID is NOT IN 2, 4, and 6.
+
+11. Display products whose quantity is greater than 20 AND category ID is 1.
+
+12. Display products whose quantity is less than 20 OR category ID is 5.
+
+13. Display products whose quantity is between 10 and 30 AND category ID is
+    either 1 or 3.
+
+14. Display products whose quantity is greater than 40 OR quantity is less
+    than 10.
+
+15. Display products whose quantity is greater than 15 AND quantity is less
+    than 50 AND category ID is 1.
+
+16. Display products manufactured between '2025-02-01' and '2025-06-30'
+    using the BETWEEN operator.
+
+17. Display products whose expiry date is NOT between '2027-01-01' and
+    '2028-12-31'.
+
+18. Display products whose quantity, when divided by 5, has remainder 0.
+    Use the modulo (%) operator.
+
+19. Display products whose quantity is greater than 20 AND whose category ID
+    is NOT 2.
+
+20. Display products where either:
+       - quantity is between 10 and 20 AND category ID is 1,
+       OR
+       - quantity is between 30 and 50 AND category ID is 2.
+
+       LIKE Operator Practice Questions
+Display all products whose pname starts with 'W'.
+Display all products whose pname ends with 'e'.
+Display all products whose pname contains the letter 'a'.
+Display all products whose pname contains the word 'Wash'.
+Display all products whose pname starts with 'C' and has any number of characters after it.
+Display all products whose pname has exactly 6 characters.
+Display all products whose pname has exactly 5 characters.
+Display all products whose pname has 'e' as the second character.
+Display all products whose pname has 'a' as the third character.
+Display all products whose pname starts with 'P' and ends with 'k'.
+Display all products whose pname contains 'er' anywhere in the name.
+Display all products whose pname starts with either 'M' or 'W'.
+Display all products whose pname does not start with 'W'.
+Display all products whose pname does not contain the letter 'a'.
+Display pid, pname, and qty for products whose name starts with 'E' and quantity is greater than 10.
+Display products whose name contains 'a' and whose cid is either 1 or 5.
+Display products whose name starts with 'S' OR whose name ends with 'e'.
+Display products whose name contains 'o' AND quantity is between 10 and 30.
+Display products whose name starts with 'C' but does not contain 'r'.
+Display products whose name contains 'a' OR 'e', and whose quantity is greater than 20.
+Find products whose name starts with 'M' or 'P'.
+Find products whose name contains 'a' or 'e'.
+Find products whose name ends with 'e' or 't'.

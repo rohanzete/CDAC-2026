@@ -1,0 +1,115 @@
+cpp endmodules
+--------------
+
+day 01 
+
+it is just basics things
+2.Create a simple ATM menu using switch-case with options such as Check Balance, Deposit, Withdraw, and Exit.
+Maintain the balance during the program execution.  - remain to do.
+
+============================================
+
+day02
+
+functions
+Pass by Value
+Pass by Reference
+Pointers / Pass by Address
+Dynamic Memory Allocation
+	1.dynamic single variable 
+	2.dynamic array 
+
+==============================================
+
+day03 - for the day 3 i need to look code and assignment question again.
+
+Class
+Creating a class
+Data members
+Member functions
+
+Object
+Creating objects
+Accessing members using .
+
+Access Specifiers
+private
+public
+
+Constructor
+What a constructor is
+Parameterized constructor
+Constructor initialization
+
+Array of Objects
+Creating multiple objects
+Accessing objects using loops
+
+Static Data Member
+Why static is used
+One common variable shared by all objects
+Defining static member outside the class
+Static Member Function
+Creating a static function
+Calling it using the class name
+What a static function can/cannot access
+
+scope resolution opeatator
+
+
+===============================================
+
+day04
+
+Destructor
+Copy Constructor
+Shallow Copy
+Deep Copy
+
+
+operator overloading 
+
+====================================================
+
+day05
+
+containment
+Containment with parameterized constructors
+Initializer list 
+
+only do day 6 and day 7 rest skip 
+
+==============================================
+
+day06
+
+virtual function
+pure virtual function 
+abstract class
+Base-class pointer pointing to derived object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

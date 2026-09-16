@@ -1,0 +1,61 @@
+Create a table
+Location(loc_id, lname,address)
+Server (serverid,sname,configuration,locid, adminid)
+Admin(adminid,uname,password,mobile,name)
+location table
++--------+-------+--------------+
+| Loc_id | Lname | Address      |
++--------+-------+--------------+
+|    100 | lab A | IACSD Pune   |
+|    101 | lab B | Acts Pune    |
+|    102 | lab C | Acts Pune    |
+|    103 | lab D | IACSD Pune   |
+|    104 | lab E | SunBeam Pune |
++--------+-------+--------------+
+
+server
+
++----------+--------+---------------------+-------+---------+
+| Serverid | Sname  | Configuration       | Locid | Adminid |
++----------+--------+---------------------+-------+---------+
+|        1 | omega1 | I5 processor 16 GB  |   100 |    1001 |
+|        2 | omega2 | I4 processor 32 GB  |   100 |    1001 |
+|        3 | omega3 | I7 processor 32 GB  |   101 |    1002 |
+|        4 | omega4 | I5 processor 16 GB  |   101 |    1002 |
+|        5 | test1  | I4 processor 16 GB  |   102 |    1002 |
+|        6 | test2  | I3 processor 24 GB  |   102 |    1003 |
+|        7 | test3  | I5 processor 8 GB   |   101 |    1003 |
+|        8 | Lotus1 | I5 processor 16 GB  |   103 |    1003 |
+|        9 | oracle | I5 processor 256 GB |   103 |    1002 |
+|       10 | omega5 | I5 processor 256 GB |   103 |    1001 |
+|       11 | mysql2 | I5 processor 256 GB |  NULL |    NULL |
+|       12 | mysql3 | I5 processor 256 GB |  NULL |    1001 |
+|       13 | mysql4 | I5 processor 256 GB |  NULL |    1001 |
++----------+--------+---------------------+-------+---------+
+
+admin 
++---------+-------+----------+--------+----------+
+| Adminid | Uname | Password | Mobile | Name     |
++---------+-------+----------+--------+----------+
+|    1001 | user1 | user1    |  11111 | Namrata  |
+|    1002 | user2 | user2    |   2222 | Rohit    |
+|    1003 | user3 | user3    |   3333 | Priyanka |
+|    1004 | user4 | user4    |  44444 | Shilpi   |
+|    1005 | user5 | user5    |  55555 | Swati    |
++---------+-------+----------+--------+----------+
+
+1. display all server-name, location name of the server
+2. display all server-name, admin-name, admin mobile
+3. display all server which are managed by admin rohit
+4. display all server and the locations, 
+for which admin is rohit
+5. display all admins, for whom no server is assigned
+6. display all servers and admin details, and also 
+display admins for whom no server is assigned
+7. display  servers, admins and location of the server
+8. to display all admins for whom no server is assigned
+also display locations at which no server is placed
+9. display all servers for which no location is assigned
+10. display all servers, for which no location is assigned,
+whose admin is namrata
+
