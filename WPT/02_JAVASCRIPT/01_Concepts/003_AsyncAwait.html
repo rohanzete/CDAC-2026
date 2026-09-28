@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // creating the async function 
+        // async function always return a promise
+
+        async function sayHello()
+        {
+            return "Hello";
+        }
+
+        // both are ok
+
+        // const data = sayHello();
+        // console.log(data)
+
+        console.log(sayHello())
+
+
+
+        /*===================================================
+
+        5. Fetch Product
+        Create a Promise that returns:
+        {
+            id: 101,
+            name: "Laptop",
+            price: 50000
+        }
+
+        after 3 seconds.
+        Use async/await and try/catch.
+        Print:
+        Product: Laptop
+        Price: 50000
+        */
+
+
+        /*
+
+        const promise = new Promise((res,rej)=>{
+
+            const product = {
+                id : 101,
+                name :  "laptop",
+                price : 50000
+            }
+
+            res(product);
+
+        });
+
+        async function getData()
+        {
+            const data = await promise;
+            console.log(data.name);
+            console.log(data.price);
+
+        }
+
+        getData();
+
+        */
+
+    </script>
+</body>
+</html>

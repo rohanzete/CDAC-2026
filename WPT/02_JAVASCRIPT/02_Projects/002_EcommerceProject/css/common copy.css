@@ -1,0 +1,39 @@
+.SocialMediaIcon
+{
+    height: 50px;
+    width: 50px;
+}
+
+.pageContentPlacceHolder
+{
+    width: 98%;
+    border: 5px solid blue;
+    margin: 5px;
+}
+
+#adDiv
+{
+    height: 50px;
+    width: 100%; 
+}
+
+.AdContainer
+{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(197, 197, 82);
+}
+
+.logo
+{
+    height: 100px; 
+    width: 100px
+}
+
+.Container
+{
+    margin: 10px; 
+    width: 98%; 
+    border: 5px solid black; 
+    padding: 5px
+}

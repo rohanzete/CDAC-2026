@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+
+        🟢 Level 2 — Async/Await
+
+        1. Delayed User
+        Create:
+        async function getUser()
+
+        Create a Promise that returns this object after 2 seconds:
+        {
+            id: 1,
+            name: "Rohan",
+            role: "Developer"
+        }
+
+        Use await to get the result and display the user's name.
+
+        */
+
+
+        // method 1 :
+
+        /*
+
+        const promise = new Promise((res,rej)=>{
+
+            const user = {
+
+                name : "rohan",
+                id : 101,
+                dept : "computer"
+
+            }
+
+            res(user);
+
+        })
+
+        async function getUser()
+        {
+            const data = await promise;
+
+            console.log(data);
+            console.log(data.name);
+            console.log(data.id);
+            console.log(data.dept);
+
+        }
+
+        getUser();
+
+
+        */
+
+
+        // method 2 :
+
+
+        async function getUser()
+        {
+            return new Promise((resolve, reject)=>{
+
+                const user = {
+
+                name : "rohan",
+                id : 101,
+                dept : "computer"
+
+                }
+
+                resolve(user);
+            })
+        }
+
+        
+        async function showData()
+        {
+            const data = await getUser();
+            console.log(data);
+            console.log(data.name);
+            console.log(data.id);
+            console.log(data.dept);
+        }
+
+        showData();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input
+      type="button"
+      id="btnShow"
+      onclick="Show()"
+      value="Show Product Added "
+    />
+    <div style="width: 98%;border: 2px black solid;">
+        <table  border="1px" style="width: 98%; margin: 5px;">
+            <tbody>
+                <tr>
+                    <td style="width: 100px;"><img src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp" 
+                        alt="essence-mascara-lash-princess">
+                    </td>                
+                    <td>
+                        <table border="1" style="width: 50%;">
+                            <tr>
+                                <td  style="font-weight: bolder; width: 150px;" >ProductId:</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bolder; width: 150px;">Product:</td>
+                                <td>essence-mascara-lash-princess</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bolder; width: 150px;">Description:</td>
+                                <td>The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects.
+                                     Achieve dramatic lashes with this long-lasting and cruelty-free formula.</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bolder; width: 150px;">Price:</td>
+                                <td>9.99</td>
+                            </tr>
+                            <tr>
+                               <td style="font-weight: bolder; width: 150px;">Rating:</td>
+                                <td>2.56</td> 
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="padding: 10px;">
+                        <input type="button" id="btnadd" value="Add to cart" onclick="AddtoCart(1,'essence-mascara-lash-princess',9.99)">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+
+    <script>
+        var ProductPurchased=[];
+
+        function AddtoCart(ProductId,productName,Price){
+            console.log(
+                `Product Id=${ProductId},Product Name=${productName},Product Price=${Price}`,
+                ProductPurchased.push({
+                    ID:ProductId,
+                    Title:productName,
+                    Price:Price
+                }),
+            );
+        }
+        function Show() {
+        console.log(ProductPurchased);
+      }
+    </script>
+</body>
+</html>

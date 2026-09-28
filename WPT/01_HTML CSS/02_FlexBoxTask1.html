@@ -1,0 +1,95 @@
+<!-- Task 1 — Navbar
+
+Build this:
+
+┌──────────────────────────────────────────────┐
+│ MyPortfolio     Home  About  Skills  Contact │
+└──────────────────────────────────────────────┘
+
+Requirements:
+
+Logo on the left
+Links on the right
+Vertically center everything
+20px gap between links
+Navbar should work when the screen becomes smaller  //this  part is left to implement
+
+You should figure out and use:
+
+display: flex
+justify-content
+align-items
+gap
+flex-wrap
+
+====================================================== -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        body
+        {
+            height: 2000px;
+        }
+
+        .nav
+        {
+            width: 100%;
+            height: 60px;
+            background-color: limegreen;
+            display: flex;
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        .content
+        {
+            width: 100%;
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+            gap: 950px;
+            justify-content: center;
+
+        }
+
+        .anchor
+        {
+            display: flex;
+            gap: 80px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="content">
+
+            <p>RZ</p>
+            <div class="anchor">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Skill</a>
+                <a href="">Contact</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

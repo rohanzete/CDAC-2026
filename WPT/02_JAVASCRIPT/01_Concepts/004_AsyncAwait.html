@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        async function saySomething()
+        {
+            return "Hello World";
+        }
+
+        // method 1 :
+        //  handeling the promise using .then and .catch 
+
+
+        // saySomething()
+        // .then((result)=>{
+
+        //     console.log(result);
+
+        // })
+        // .catch((err)=>{
+
+        //     console.log("the error is ",error);
+            
+        // })
+
+
+
+        // method 2 : 
+        // using async await
+
+        async function getData()
+        {
+
+            // await pauses the execution of the async function until the Promise is settled
+            // (means either success or failure, but not remain pending).
+
+            // Then:
+            // - If fulfilled → await gives you the resolved value.
+            // - If rejected → await throws the rejected value/error.
+
+            const data = await saySomething();
+            console.log(data);  
+
+        }
+
+        getData();
+
+
+
+
+    </script>
+</body>
+</html>
